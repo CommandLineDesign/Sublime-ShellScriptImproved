@@ -25,6 +25,16 @@ ${foo}/${bar}/${exe}
 #        ^^^        variable.other.bracket
 #               ^^^ variable.other.bracket
 
+$foo $bar@"$* - from $(hostname)"
+#^^^ variable.other.normal
+#     ^^^ variable.other.normal
+#         ^ punctuation.definition.string.begin
+#         ^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double
+#          ^^ variable.other.specia
+#                    ^^ punctuation.definition.string.begin
+#                      ^^^^^^^^ support.function.external
+#                              ^ punctuation.definition.string.end
+#                               ^ punctuation.definition.string.end
 
 ####################################################
 # Strings and interpolation in parameter expansion #
