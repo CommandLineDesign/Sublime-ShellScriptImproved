@@ -1,6 +1,24 @@
 # ShellScript Improved
 
 
+## 1.2.26
+
+- Fix variable could be an executable or a function
+
+```bash
+$foo $bar@"$* - from $(hostname)"
+#^^^ variable.other.normal
+#     ^^^ variable.other.normal
+#         ^ punctuation.definition.string.begin
+#         ^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double
+#          ^^ variable.other.special
+#                    ^^ punctuation.definition.string.begin
+#                      ^^^^^^^^ support.function.external
+#                              ^ punctuation.definition.string.end
+#                               ^ punctuation.definition.string.end
+```
+
+
 ## 1.2.25
 
 - Add highlight for string in array section.
